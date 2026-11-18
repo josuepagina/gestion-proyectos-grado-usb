@@ -1,0 +1,267 @@
+.proyecto-tareas {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.proyecto-tareas h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.4rem;
+}
+
+.tareas-loading,
+.tareas-empty {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.etapas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.etapa-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.etapa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--color-info), var(--color-info-light));
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.etapa-header:hover {
+  background: linear-gradient(135deg, var(--color-info-dark), var(--color-info));
+}
+
+.etapa-title {
+  flex: 1;
+}
+
+.etapa-title h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.etapa-numero {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.etapa-desc {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.etapa-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.tareas-count {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.expand-icon {
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.etapa-content {
+  padding: 1.5rem;
+}
+
+.tareas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.tarea-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tarea-card:hover {
+  border-color: var(--color-info);
+  box-shadow: 0 2px 8px rgba(var(--color-info-rgb), 0.15);
+}
+
+.tarea-header h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.tarea-desc {
+  margin: 0.5rem 0 0.75rem 0;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+.tarea-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  background-color: var(--color-info-light);
+  color: var(--color-info);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tarea-entregable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.entrega-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.6rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-info);
+  box-shadow: 0 0 0 2px rgba(var(--color-info-rgb), 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-buttons .btn {
+  flex: 1;
+  padding: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.btn-success {
+  background-color: var(--color-success);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-success:hover {
+  background-color: var(--color-success-dark);
+}
+
+.tarea-no-entregable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: var(--bg-primary);
+  border-radius: 4px;
+}
+
+.tarea-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--color-success);
+}
+
+.checkbox-label {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.tarea-checkbox:checked + .checkbox-label {
+  color: var(--color-success);
+  text-decoration: line-through;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .etapa-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .etapa-info {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .tareas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .etapa-title h3 {
+    font-size: 1rem;
+  }
+}

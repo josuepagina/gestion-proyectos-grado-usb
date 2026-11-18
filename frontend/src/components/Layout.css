@@ -1,0 +1,259 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(248, 250, 252, 0.68), rgba(248, 250, 252, 0.74)), url('/branding/fondo-aula.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all var(--transition-base);
+}
+
+.header:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.brand-strip {
+  border-bottom: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.brand-strip-content {
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+
+.brand-logo {
+  object-fit: contain;
+  display: block;
+}
+
+.brand-logo-usb {
+  max-height: 56px;
+  width: auto;
+}
+
+.brand-logo-is {
+  max-height: 56px;
+  width: auto;
+}
+
+.brand-logo-red {
+  max-height: 40px;
+  width: auto;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  gap: 2rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform var(--transition-base);
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.025em;
+}
+
+.logo-img {
+  height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  position: relative;
+  font-size: 0.875rem;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  transition: width var(--transition-base);
+  border-radius: var(--radius-full);
+}
+
+.nav a:hover {
+  color: var(--primary);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.nav a:hover::before {
+  width: calc(100% - 2.5rem);
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.875rem;
+  padding-right: 1rem;
+  border-right: 1px solid var(--border);
+}
+
+.user-info strong {
+  color: var(--text);
+  font-weight: 600;
+  display: block;
+}
+
+.user-role {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  text-transform: capitalize;
+  margin-top: 0.125rem;
+}
+
+.user-menu .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+}
+
+.main {
+  flex: 1;
+  padding: 2.5rem 0;
+  min-height: calc(100vh - 80px);
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    gap: 0.25rem;
+  }
+  
+  .nav a {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-strip-content {
+    min-height: 56px;
+    gap: 0.5rem;
+  }
+
+  .brand-logo-usb,
+  .brand-logo-is {
+    max-height: 42px;
+  }
+
+  .brand-logo-red {
+    max-height: 30px;
+  }
+
+  .header-content {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .logo h1 {
+    font-size: 1.25rem;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .user-menu {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .main {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 1rem 0;
+  }
+
+  .logo h1 {
+    font-size: 1.125rem;
+  }
+
+  .user-menu .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+

@@ -1,0 +1,345 @@
+.etapas-tutor-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border, #e6e8ec);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.etapas-tutor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.etapas-tutor-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--color-info, #e6f0ff);
+  color: #1b5dbf;
+}
+
+.badge-info {
+  background: #e6f0ff;
+  color: #1b5dbf;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.55rem 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.create-form {
+  border: 1px solid var(--border, #e6e8ec);
+  border-radius: 10px;
+  padding: 1rem;
+  background: #f9fbff;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.edit-etapa-form {
+  border: 1px solid var(--border, #e6e8ec);
+  border-radius: 10px;
+  padding: 0.9rem;
+  background: #fff;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-row label {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.form-row.two-cols {
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.form-row.two-cols .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.create-form input[type='text'],
+.create-form input[type='datetime-local'],
+.create-form textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.edit-etapa-form input[type='text'],
+.edit-etapa-form input[type='datetime-local'],
+.edit-etapa-form textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.error-msg {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.etapas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.etapa-item {
+  border: 1px solid var(--border, #e6e8ec);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fafbff;
+}
+
+.etapa-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.etapa-row:hover {
+  background: #f2f5ff;
+}
+
+.etapa-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.etapa-title {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.etapa-title .nombre {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text, #232b38);
+}
+
+.etapa-title .descripcion {
+  font-size: 0.9rem;
+  color: var(--text-light, #6b7280);
+}
+
+
+.meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.pill {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.pill.soft {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.estado {
+  padding: 0.2rem 0.65rem;
+  border-radius: 8px;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.estado-borrador {
+  background: #fff7e6;
+  color: #b45309;
+}
+
+.estado-publicada {
+  background: #e6f7ff;
+  color: #0b76d8;
+}
+
+.estado-cerrada {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.orden {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.chevron {
+  font-size: 1.1rem;
+  color: #6b7280;
+  transition: transform 0.2s ease;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.tareas-panel {
+  border-top: 1px solid var(--border, #e6e8ec);
+  background: #fff;
+  padding: 0.85rem 1rem 1rem;
+}
+
+.tareas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.tarea-item {
+  border: 1px solid #eef2ff;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  background: #f9fbff;
+}
+
+.tarea-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.tarea-descripcion {
+  margin-top: 0.35rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.tarea-meta {
+  margin-top: 0.35rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pill.entregable {
+  background: #e8f7ee;
+  color: #0f9d58;
+}
+
+.pill.no-entregable {
+  background: #fff7e6;
+  color: #b45309;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.empty {
+  color: #6b7280;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .etapa-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .meta {
+    width: 100%;
+  }
+}
