@@ -8,7 +8,15 @@
     {
       "name": "web",
       "rootDirectory": "frontend",
-      "framework": "vite"
+      "framework": "vite",
+      "bindings": [
+        {
+          "type": "service",
+          "service": "api",
+          "format": "url",
+          "env": "API_URL"
+        }
+      ]
     }
   ],
   "rewrites": [
